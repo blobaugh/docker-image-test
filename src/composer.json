@@ -1,5 +1,42 @@
 {
-    "require": {
-        "select2/select2": "^4.0"
-    }
+	"name" : "blobaugh/wordpress-base",
+	"description" : "Composer build file for use inside a containerized environment, such as Docker.",
+	"authors": [
+		{
+			"name" : "Ben Lobaugh",
+			"email" : "ben@lobaugh.net",
+			"homepage" : "https://ben.lobaugh.net"
+		}
+	],
+	"homepage": "https://ben.lobaugh.net/containerizing-wordpress",
+	"type" : "project",
+	"repositories" : [
+		{
+			"type" : "composer",
+			"url" : "https://wpackagist.org"
+		}
+	],
+	"require" : {
+		"johnpbloch/wordpress" : "*"
+	},
+	"require-dev" : {
+		"wpackagist-plugin/query-monitor" : "*"
+	},
+	"config" : {
+		"vendor-dir" : "wp-content/vendor"
+	},
+	"extra" : {
+		"wordpress-install-dir": "blog",
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			],
+			"wp-content/plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"wp-content/themes/{$name}/": [
+				"type:wordpress-theme"
+			]
+		}
+	}
 }

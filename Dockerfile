@@ -59,4 +59,6 @@ RUN a2enmod rewrite headers
 
 # Cleanup
 RUN rm -rf /usr/src/*
+
+USER www-data
 COPY src/ /var/www/html/

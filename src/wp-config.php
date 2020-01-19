@@ -38,7 +38,7 @@ define( 'DB_USER', $_ENV['db_user'] );
 define( 'DB_PASSWORD', $_ENV['db_pass']  );
 
 /** MySQL hostname */
-define( 'DB_HOST', $ENV['db_host'] );
+define( 'DB_HOST', $_ENV['db_host'] );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );

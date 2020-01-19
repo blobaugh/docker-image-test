@@ -1,4 +1,2 @@
 <?php
-
-echo '<pre>';
-var_dump( $_ENV );
+require dirname( __FILE__ ) . '/blog/index.php';

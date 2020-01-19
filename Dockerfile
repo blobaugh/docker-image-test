@@ -1,3 +1,3 @@
-FROM nginx
+FROM php:7.3-apache-stretch
 
-COPY src/ /usr/share/nginx/html/
+COPY src/ /var/www/html/
